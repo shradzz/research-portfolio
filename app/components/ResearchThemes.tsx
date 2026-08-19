@@ -1,18 +1,21 @@
 const themes = [
   {
     number: "01",
-    title: "AI & Entrepreneurship",
-    question: "How does AI change what one founder can build alone?",
+    title: "Ideas → Ventures",
+    question:
+      "How can emerging technologies help transform an idea into a viable venture from the ground up?",
   },
   {
     number: "02",
-    title: "Digital Work & Organizations",
-    question: "What happens when technology begins to substitute traditional roles?",
+    title: "AI → Scale",
+    question:
+      "How does accessible AI change what individuals and small teams can build, operate, and scale?",
   },
   {
     number: "03",
-    title: "Economic Opportunity",
-    question: "How can emerging technologies reshape access to entrepreneurship and growth?",
+    title: "Ventures → Economic Opportunity",
+    question:
+      "How can technology help entrepreneurs and small businesses turn resourcefulness into sustainable growth and broader economic opportunity?",
   },
 ];
 
@@ -25,8 +28,13 @@ export default function ResearchThemes() {
         </p>
 
         <h2 className="text-4xl font-semibold tracking-tight md:text-6xl">
-          Questions that keep pulling me back.
+          From ideas to economic impact.
         </h2>
+
+        <p className="mt-6 max-w-xl text-lg leading-relaxed text-neutral-600">
+          I am interested in what becomes possible when powerful technologies
+          become accessible to people building with limited resources.
+        </p>
       </div>
 
       <div className="grid gap-6 md:grid-cols-3">

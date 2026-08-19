@@ -1,64 +1,45 @@
-const themes = [
-  {
-    number: "01",
-    title: "Ideas → Ventures",
-    question:
-      "How can emerging technologies help transform an idea into a viable venture from the ground up?",
-  },
-  {
-    number: "02",
-    title: "AI → Scale",
-    question:
-      "How does accessible AI change what individuals and small teams can build, operate, and scale?",
-  },
-  {
-    number: "03",
-    title: "Ventures → Economic Opportunity",
-    question:
-      "How can technology help entrepreneurs and small businesses turn skills & ideas into sustainable growth and broader economic opportunity?",
-  },
-];
+import Navbar from "./components/Navbar";
+import ResearchThemes from "./components/ResearchThemes";
+import FeaturedResearch from "./components/FeaturedResearch";
 
-export default function ResearchThemes() {
+export default function Home() {
   return (
-    <section className="px-8 py-24 md:px-16">
-      <div className="mb-16 max-w-2xl">
-        <p className="mb-4 text-sm uppercase tracking-[0.25em] text-neutral-500">
-          What I Explore
+    <main className="min-h-screen bg-[#f7f5f0] text-[#171717]">
+
+      {/* Navigation */}
+      <Navbar />
+
+      {/* Hero */}
+      <section className="flex min-h-[80vh] flex-col justify-center px-8 md:px-16">
+        <p className="mb-5 text-sm uppercase tracking-[0.25em] text-neutral-500">
+          Researcher · Scholar · Educator
         </p>
 
-        <h2 className="text-4xl font-semibold tracking-tight md:text-6xl">
-          From ideas to economic impact.
-        </h2>
+        <h1 className="max-w-5xl text-6xl font-semibold tracking-tight md:text-8xl">
+          Shradha Shinde
+        </h1>
 
-        <p className="mt-6 max-w-xl text-lg leading-relaxed text-neutral-600">
-          I am interested in what becomes possible when powerful technologies
-          become accessible to people building with limited resources.
+        <p className="mt-8 max-w-2xl text-xl leading-relaxed text-neutral-600 md:text-2xl">
+          Exploring how emerging AI technologies reshape entrepreneurship,
+          organizations, and economic opportunity.
         </p>
-      </div>
 
-      <div className="grid gap-6 md:grid-cols-3">
-        {themes.map((theme) => (
-          <article
-            key={theme.number}
-            className="group min-h-[280px] border border-black/10 bg-[#efebe3] p-7 transition duration-300 hover:-translate-y-1"
+        <div className="mt-10">
+          <a
+            href="/research"
+            className="inline-block border-b border-black pb-1 text-base"
           >
-            <p className="mb-12 text-sm text-neutral-500">
-              {theme.number}
-            </p>
+            Explore my research →
+          </a>
+        </div>
+      </section>
 
-            <h3 className="text-2xl font-semibold">
-              {theme.title}
-            </h3>
+      {/* Research Themes */}
+      <ResearchThemes />
 
-            <p className="mt-5 text-lg leading-relaxed text-neutral-600">
-              {theme.question}
-            </p>
+      {/* Featured Research */}
+      <FeaturedResearch />
 
-            <div className="mt-8 h-px w-16 bg-black transition-all duration-300 group-hover:w-28" />
-          </article>
-        ))}
-      </div>
-    </section>
+    </main>
   );
 }
